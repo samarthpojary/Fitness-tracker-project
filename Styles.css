@@ -1,49 +1,98 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     margin: 0;
     padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-    max-width: 400px;
+    max-width: 450px;
+    width: 100%;
     margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
 }
 
 h1 {
     text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 2.2em;
 }
 
 label {
     display: block;
-    margin: 10px 0 5px;
+    margin: 15px 0 8px;
+    color: #555;
+    font-weight: 500;
+    font-size: 1.1em;
 }
 
 input, select, button {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
 button {
-    background-color: #28a745;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border: none;
     cursor: pointer;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #218838;
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
 }
 
 .result {
-    margin-top: 20px;
-    font-size: 1.2em;
+    margin-top: 25px;
+    font-size: 1.4em;
     text-align: center;
+    color: #333;
+    font-weight: 500;
+    padding: 15px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
 }
